@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Language Learning App</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="my_css.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Language Learning App</h1>
+    <div class="form-group mb-4">
+      <label for="difficulty">Choose Difficulty Level</label>
+      <select id="difficulty" class="form-control">
+        <option value="easy">Beginner</option>
+        <option value="medium">Intermediate</option>
+        <option value="hard">Advanced</option>
+      </select>
+    </div>
+    <div class="progress mb-4">
+      <div class="progress-bar" style="width: 0%;" id="progress-bar">Step 0 of 10</div>
+    </div>
+    <div class="card text-center">
+      <div class="card-body">
+        <h2 class="card-title">Word: <span id="word">Loading...</span></h2>
+        <input type="text" id="translation" class="form-control mt-3" placeholder="Enter translation">
+        <button class="btn btn-primary mt-3" id="check">Check</button>
+      </div>
+    </div>
+    <div class="mt-4 text-center">
+      <p>Correct: <span id="correct">0</span> | Incorrect: <span id="incorrect">0</span></p>
+    </div>
+  </div>
+  <div class="modal fade" id="resultModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Your Results</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Your score is: <span id="score">0%</span></p>
+          <p>Knowledge level: <strong id="level">Beginner</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
